@@ -1,6 +1,5 @@
-import App from './components/App';
-var React = require('react');
-var ReactDOM = require('react-dom');
+import App from './components/App'
+import ReactDOM from 'react-dom'
 
 ReactDOM.render(<App />, document.getElementById('app'))
-module.hot.accept();
+module.hot.accept()
