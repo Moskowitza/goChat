@@ -1,13 +1,11 @@
 {
   "parser": "babel-eslint",
-  "extends": [
-    "eslint:recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "eslint-config-prettier"
-  ],
+  "extends": ["eslint:recommended", "eslint-config-prettier"],
   "settings": {
-    "import/resolver": "webpack"
+    "import/resolver": "webpack",
+    "react": {
+      "version": "detect"
+    }
   },
   "plugins": ["react"],
   "env": {

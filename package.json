@@ -5,8 +5,12 @@
   "main": "app.js",
   "scripts": {
     "start:dev": "webpack-dev-server",
+    "build": "webpack",
     "lint": "eslint --ignore-path .gitignore .",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\""
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "prettier --ignore-path .gitignore --list-different \"**/*.+(js|json)\"",
+    "validate": "npm run lint && npm run build"
   },
   "repository": {
     "type": "git",

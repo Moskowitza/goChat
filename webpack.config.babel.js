@@ -5,15 +5,16 @@ import htmlWebpackTemplate from 'html-webpack-template';
 import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
 
 export default {
+  mode: 'development',
   entry: './src/index.js',
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader']
-      }
-    ]
+        use: ['babel-loader', 'eslint-loader'],
+      },
+    ],
   },
   resolve: {
     modules: ['node_modules'],
@@ -22,7 +23,7 @@ export default {
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -32,14 +33,14 @@ export default {
       filename: 'index.html',
       title: 'Go Chat',
       appMountId: ['app'],
-      mobile: true
+      mobile: true,
     }),
     new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: 'defer'
-    })
+      defaultAttribute: 'defer',
+    }),
   ],
   devServer: {
     contentBase: './dist',
-    hot: true
-  }
+    hot: true,
+  },
 };

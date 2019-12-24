@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function ChannelForm({ addChannel }) {
   const [channelName, setChannelName] = useState('');
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
     addChannel(channelName);
     setChannelName('');
