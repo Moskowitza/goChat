@@ -1,7 +1,7 @@
 import React from 'react'
 import ChannelForm from './ChannelForm'
 import ChannelList from './ChannelList'
-
+import PropTypes from 'prop-types';
 export default class ChannelSection extends React.Component {
   constructor (props) {
     super(props)
@@ -26,4 +26,7 @@ export default class ChannelSection extends React.Component {
       </div>
     )
   }
+}
+ChannelSection.propTypes = {
+
 }

@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 export default class Channel extends React.Component {
   onClick () {
@@ -12,4 +13,7 @@ export default class Channel extends React.Component {
       </li>
     )
   }
+}
+Channel.propTypes = {
+  channel: PropTypes.object.isRequired
 }

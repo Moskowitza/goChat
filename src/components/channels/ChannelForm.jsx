@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 export default class ChannelForm extends React.Component {
   constructor (props) {
@@ -32,4 +33,7 @@ export default class ChannelForm extends React.Component {
       </form>
     )
   }
+}
+ChannelForm.propTypes = {
+  addChannel: PropTypes.func.isRequired
 }

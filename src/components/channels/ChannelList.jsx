@@ -1,6 +1,6 @@
 import React from 'react'
 import Channel from './Channel'
-
+import PropTypes from 'prop-types'
 
 export default class ChannelList extends React.Component {
   render () {
@@ -14,4 +14,8 @@ export default class ChannelList extends React.Component {
       </ul>
     )
   }
+}
+ChannelList.propTypes = {
+  channels: PropTypes.array.isRequired,
+  setChannel: PropTypes.func.isRequired
 }
