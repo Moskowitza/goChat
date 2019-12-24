@@ -6,7 +6,6 @@ export default function ChannelList({ channels }) {
   return (
     <ul>
     {channels.map((channel, i) => {
-      console.log(channel)
       return <Channel key={i} channel={channel} />
     })}
   </ul>
@@ -14,5 +13,4 @@ export default function ChannelList({ channels }) {
 }
 ChannelList.propTypes = {
   channels: PropTypes.array.isRequired,
-  setChannel: PropTypes.func.isRequired
 }
