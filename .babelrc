@@ -1,20 +1,4 @@
 {
-    "presets": [
-        "@babel/preset-env",
-        "@babel/preset-react"
-    ],
-    "plugins": [
-        [
-            "module-resolver",
-            {
-                "root": [
-                    "./"
-                ],
-                "alias": {
-                    "@root": "./",
-                    "@channels": "./src/channels"
-                }
-            }
-        ]
-    ]
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": []
 }

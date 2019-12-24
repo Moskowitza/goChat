@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-
 export default function ChannelForm({ addChannel }) {
   const [channelName, setChannelName] = useState('');
   const onSubmit = (e) => {
@@ -9,6 +8,7 @@ export default function ChannelForm({ addChannel }) {
     addChannel(channelName);
     setChannelName('');
   };
+
   return (
     <form onSubmit={onSubmit}>
       <input

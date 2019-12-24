@@ -1,8 +1,8 @@
-import webpack from 'webpack'
-import path from 'path'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import htmlWebpackTemplate from 'html-webpack-template'
-import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin'
+import webpack from 'webpack';
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import htmlWebpackTemplate from 'html-webpack-template';
+import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
 
 export default {
   entry: './src/index.js',
@@ -16,7 +16,8 @@ export default {
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    modules: ['node_modules'],
+    extensions: ['*', '.js', '.jsx'],
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -41,4 +42,4 @@ export default {
     contentBase: './dist',
     hot: true
   }
-}
+};
