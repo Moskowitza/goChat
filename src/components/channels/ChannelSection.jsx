@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import ChannelForm from './ChannelForm';
 import ChannelList from './ChannelList';
 
 export default function ChannelSection() {
-  const [channels, setChannels] = useState([
+  const [channels, setChannels] = React.useState([
     { name: 'channel 1' },
     { name: 'channel 2' },
     { name: 'channel 3' },

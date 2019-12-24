@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Channel from './Channel';
 import PropTypes from 'prop-types';
 

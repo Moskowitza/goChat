@@ -6,19 +6,21 @@ import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
 
 export default {
   mode: 'development',
-  entry: './src/index.js',
+  entry: './src/index.tsx',
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader'],
-      },
+      { test: /\.(t|j)sx?$/, use: { loader: 'awesome-typescript-loader' } },
+      { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
+      // {
+      //   test: /\.(js|jsx)$/,
+      //   exclude: /node_modules/,
+      //   use: ['babel-loader', 'eslint-loader'],
+      // },
     ],
   },
   resolve: {
     modules: ['node_modules'],
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ['*', '.ts', '.tsx', '.js', '.jsx'],
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -43,4 +45,6 @@ export default {
     contentBase: './dist',
     hot: true,
   },
+  externals: {},
+  devtool: 'source-map',
 };

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export default function ChannelForm({ addChannel }) {
-  const [channelName, setChannelName] = useState('');
+  const [channelName, setChannelName] = React.useState('');
   const onSubmit = e => {
     e.preventDefault();
     addChannel(channelName);
