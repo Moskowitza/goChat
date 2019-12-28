@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start:dev": "webpack-dev-server",
+    "start": "webpack-dev-server",
     "build": "webpack",
     "lint": "eslint --ignore-path .gitignore .",
     "check-types": "tsc",
